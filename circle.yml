@@ -10,3 +10,8 @@ deployment:
 test:
   override:    
     - mocha
+    
+# From Biboy's code
+#notify:
+#  webhooks:
+#    - url: http://54.197.16.151:9200/circleci/new_events
