@@ -7,15 +7,15 @@ deployment:
     commands:
       - $DOCKER_HUB_TRIGGER
 
-test:
-  override:    
-    - mocha
-
 #test:
-#  override:
-#    - mocha test --reporter mocha-junit-reporter:
-#        environment:
-#          MOCHA_FILE: $CIRCLE_TEST_REPORTS/junit/test-results.xml
+#  override:    
+#    - mocha
+
+test:
+  override:
+    - mocha test --reporter mocha-junit-reporter:
+        environment:
+          MOCHA_FILE: $CIRCLE_TEST_REPORTS/junit/test-results.xml
     
 # From Biboy's code
 #notify:
